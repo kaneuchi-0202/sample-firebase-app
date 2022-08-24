@@ -1,0 +1,30 @@
+@use "../../../styles/variables.scss" as var;
+
+.Button {
+  font-family: var.$font;
+  font-size: var.$large;
+  font-weight: var.$font-bold;
+  border-radius: 5px;
+
+  &[data-theme="primary"] {
+    border: 1px solid var.$white;
+  }
+
+  &[data-theme="white"] {
+    border: 1px solid var.$white;
+    background-color: var.$white;
+    color: var.$primary;
+  }
+
+  &[data-size="normal"] {
+    width: 220px;
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  &[data-size="large"] {
+    width: 100%;
+    text-align: left;
+    padding: 24px;
+  }
+}

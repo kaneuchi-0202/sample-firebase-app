@@ -1,6 +1,7 @@
 @use "../../../styles/variables.scss" as var;
 
 .Header {
+  font-family: var.$font;
   position: sticky;
   top: 0;
   left: 0;

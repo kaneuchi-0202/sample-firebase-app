@@ -1,1 +1,91 @@
-@use "variables.scss" as var;
+@use "../../styles/variables.scss" as var;
+
+.Service {
+  font-family: var.$font;
+
+  &__section {
+    padding: var.$m-80 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var.$primary;
+
+    &:nth-child(odd) {
+      background-color: var.$primary-bg;
+      color: var.$white;
+    }
+  }
+
+  &__service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+
+    &Title {
+      font-size: var.$xxxxLarge;
+      font-weight: var.$font-bold;
+    }
+
+    &Text {
+      font-size: var.$large;
+    }
+
+    &ButtonWrapper {
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    max-width: 1200px;
+    gap: 40px;
+
+    &Card {
+      border: 1px solid var.$gray-100;
+      padding: 40px;
+      width: 500px;
+      text-align: left;
+
+      span {
+        font-size: var.$xxxLarge;
+        font-weight: var.$font-bold;
+      }
+
+      div {
+        margin-top: var.$m-16;
+        font-size: var.$large;
+      }
+
+      &Link {
+        text-align: right;
+        font-weight: var.$font-bold;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: space-between;
+
+    &Block {
+      width: 640px;
+      padding: 0 48px;
+      text-align: left;
+      span {
+        font-size: var.$xxxLarge;
+        font-weight: var.$font-bold;
+      }
+
+      p {
+        margin-top: var.$m-16;
+        font-size: var.$large;
+      }
+
+      &Button {
+        margin-top: var.$m-40;
+      }
+    }
+  }
+}
