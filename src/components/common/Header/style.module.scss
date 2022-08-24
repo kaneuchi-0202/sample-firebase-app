@@ -1,0 +1,37 @@
+@use "../../../styles/variables.scss" as var;
+
+.Header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: var.$z-header;
+  width: 100%;
+  background-color: var.$white;
+  border-bottom: 1px solid var.$gray-100;
+  color: var.$primary;
+
+  &__headerWrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 var.$m-64;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: var.$xxxxLarge;
+    font-weight: var.$font-bold;
+  }
+
+  &__links {
+    display: flex;
+    gap: 48px;
+  }
+
+  &__link {
+    font-size: var.$medium;
+    font-weight: var.$font-bold;
+  }
+
+  &__selected {
+  }
+}
