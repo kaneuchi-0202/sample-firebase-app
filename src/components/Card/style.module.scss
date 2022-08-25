@@ -1,0 +1,17 @@
+@use "../../styles/variables.scss" as var;
+
+.Card {
+  width: 100%;
+  border: 1px solid var.$gray-100;
+  padding: 40px;
+
+  &:hover {
+    animation: hoverAnimation 1s ease 0s forwards normal;
+  }
+
+  @keyframes hoverAnimation {
+    to {
+      border: 1px solid var.$primary;
+    }
+  }
+}

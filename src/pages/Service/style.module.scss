@@ -30,49 +30,17 @@
     &Text {
       font-size: var.$large;
     }
-
-    &ButtonWrapper {
-      display: flex;
-      gap: 16px;
-    }
   }
 
   &__content {
     display: flex;
     max-width: 1200px;
+    margin: 0 var.$m-48;
     gap: 40px;
 
     &Card {
-      border: 1px solid var.$gray-100;
-      padding: 40px;
-      width: 500px;
       text-align: left;
 
-      span {
-        font-size: var.$xxxLarge;
-        font-weight: var.$font-bold;
-      }
-
-      div {
-        margin-top: var.$m-16;
-        font-size: var.$large;
-      }
-
-      &Link {
-        text-align: right;
-        font-weight: var.$font-bold;
-      }
-    }
-  }
-
-  &__contact {
-    display: flex;
-    justify-content: space-between;
-
-    &Block {
-      width: 640px;
-      padding: 0 48px;
-      text-align: left;
       span {
         font-size: var.$xxxLarge;
         font-weight: var.$font-bold;
@@ -83,8 +51,9 @@
         font-size: var.$large;
       }
 
-      &Button {
-        margin-top: var.$m-40;
+      &Link {
+        text-align: right;
+        font-weight: var.$font-bold;
       }
     }
   }
