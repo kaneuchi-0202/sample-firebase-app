@@ -15,11 +15,8 @@ export const Header: React.FC = () => {
             return (
               <Link
                 key={idx}
-                className={
-                  current.pathname === category.link
-                    ? `${styles.Header__selected} ${styles.Header__link}`
-                    : styles.Header__link
-                }
+                className={styles.Header__link}
+                data-selected={current.pathname === category.link}
                 to={category.link}
               >
                 {category.value}

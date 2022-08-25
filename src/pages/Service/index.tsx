@@ -1,7 +1,5 @@
-import { Link } from "@tanstack/react-location";
 import { Card } from "../../components/Card";
 import { Button } from "../../components/common/Button";
-import { Contact } from "../../components/Contact";
 import { ContactButtons } from "../../components/ContactButtons";
 import styles from "./style.module.scss";
 
@@ -42,7 +40,34 @@ const Service: React.FC = () => {
         </div>
       </section>
       <section className={styles.Service__section}>
-        <Contact />
+        <div className={styles.Service__contact}>
+          <div className={styles.Service__contactBlock}>
+            <span>資料請求</span>
+            <p>
+              サービス資料をダウンロードいただけます。BtoBマーケティング支援や営業支援のサービスをご検討の方はぜひご一読ください。
+            </p>
+            <Button
+              value="資料請求する"
+              link="/"
+              theme="primary"
+              size="large"
+              className={styles.Service__contactBlockButton}
+            />
+          </div>
+          <div className={styles.Service__contactBlock}>
+            <span>お問い合わせ</span>
+            <p>
+              お客様のBtoBマーケティングや営業活動における課題解決をサポートします。お気軽にご相談ください。
+            </p>
+            <Button
+              value="お問い合わせする"
+              link="/"
+              theme="primary"
+              size="large"
+              className={styles.Service__contactBlockButton}
+            />
+          </div>
+        </div>
       </section>
     </div>
   );

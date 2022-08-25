@@ -57,4 +57,36 @@
       }
     }
   }
+
+  &__contact {
+    display: flex;
+    max-width: 1200px;
+
+    &Block {
+      width: 50%;
+      padding: 0 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      span {
+        font-size: var.$xxxLarge;
+        font-weight: var.$font-bold;
+      }
+
+      p {
+        margin-top: var.$m-16;
+        font-size: var.$large;
+        text-align: left;
+      }
+
+      &Button {
+        margin-top: var.$m-40;
+      }
+
+      &:nth-child(odd) {
+        border-right: 1px solid var.$white;
+      }
+    }
+  }
 }

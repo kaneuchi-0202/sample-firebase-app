@@ -31,8 +31,27 @@
   &__link {
     font-size: var.$medium;
     font-weight: var.$font-bold;
-  }
+    padding: 25px 0;
+    position: relative;
 
-  &__selected {
+    &[data-selected="true"]::after {
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      height: 3px;
+      width: 0;
+      background-color: var.$primary;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: width 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
