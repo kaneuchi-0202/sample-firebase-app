@@ -2,10 +2,6 @@
 
 .Footer {
   font-family: var.$font;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: var.$z-header;
   width: 100%;
   background-color: var.$white;
   display: flex;
@@ -13,6 +9,10 @@
   align-items: center;
   font-size: var.$medium;
   padding: 64px 48px 128px;
+
+  @include var.mq(ltm) {
+    padding: 48px 32px;
+  }
 
   &__footerWrapper {
     display: grid;
@@ -22,12 +22,26 @@
     color: var.$primary;
     gap: 128px;
     width: 100%;
+
+    @include var.mq(ltm) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
   }
 
   &__company {
     font-size: var.$small;
     font-weight: var.$font-bold;
     text-align: left;
+
+    @include var.mq(ltm) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var.$gray-100;
+    }
 
     &Name {
       font-size: var.$xxxxLarge;
@@ -42,22 +56,68 @@
   &__links {
     display: flex;
     justify-content: space-between;
+
+    @include var.mq(ltm) {
+      flex-wrap: wrap;
+      margin-top: var.$m-32;
+      row-gap: 24px;
+    }
   }
 
   &__linkColumn {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include var.mq(ltm) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: 24px;
+    }
   }
 
-  &__linkParent {
+  &__link {
     font-size: var.$medium;
     font-weight: var.$font-bold;
     margin-top: var.$m-32;
+
+    @include var.mq(ltm) {
+      width: 50%;
+      margin-top: 0;
+      text-align: left;
+    }
+
+    &Parent {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @include var.mq(ltm) {
+        width: 50%;
+        margin-top: 0;
+        text-align: left;
+      }
+    }
+
+    &Child {
+      font-size: var.$small;
+      margin-top: var.$m-16;
+    }
   }
 
-  &__linkChild {
-    font-size: var.$small;
-    margin-top: var.$m-16;
+  &__pc {
+    display: flex;
+
+    @include var.mq(ltm) {
+      display: none;
+    }
+  }
+
+  &__sp {
+    display: none;
+
+    @include var.mq(ltm) {
+      display: flex;
+    }
   }
 }

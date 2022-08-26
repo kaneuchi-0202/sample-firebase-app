@@ -3,4 +3,8 @@
 .ContactButtons {
   display: flex;
   gap: 16px;
+
+  @include var.mq(ltm) {
+    flex-direction: column;
+  }
 }

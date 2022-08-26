@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-location";
 import { Card } from "../../components/Card";
 import { ContactButtons } from "../../components/ContactButtons";
 import styles from "./style.module.scss";
@@ -16,11 +15,15 @@ const Index: React.FC = () => {
             COMPANY
           </p>
           <p className={styles.Index__topBlockText}>
-            成果が実証されているメソッドでコンサルティングします
+            成果が実証されているメソッドで
+            <span className={styles.Index__sp}>
+              <br />
+            </span>
+            コンサルティングします
           </p>
           <ContactButtons className={styles.Index__topBlockButtons} />
         </div>
-        <div className={styles.Index__topBlock}>
+        <div className={`${styles.Index__topBlock} ${styles.Index__pc}`}>
           <p className={styles.Index__topBlockCopy}>弊社のメソッド</p>
           <ul className={styles.Index__topBlockMethods}>
             <li>BtoBマーケティングのメソッド　→</li>

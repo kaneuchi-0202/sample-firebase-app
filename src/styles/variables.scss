@@ -31,6 +31,7 @@ $xxLarge: 2rem;
 $xxxLarge: 2.2rem;
 $xxxxLarge: 3.6rem;
 $copy: 7rem;
+$copy-sp: 5.5rem;
 
 $font-normal: 400;
 $font-bold: 700;
@@ -53,72 +54,15 @@ $m-256: 256px;
 $bp-small: 528px;
 $bp-medium: 768px;
 
-// ヘッダの高さ
-$header-height: 32px + 72px + 10px; // キャンペーンバナーとヘッダーと特典バナー分
-
 $mediaSizes: (
   // 768px-∞ GreaterThanMedium
-  "gtm": "screen and (min-width: #{$bp-medium})"
+  "gtm": "screen and (min-width: #{$bp-medium})",
+  // ∞-768px LessThanMedium
+  "ltm": "screen and (max-width: #{$bp-medium})"
 );
 
 @mixin mq($size) {
   @media #{map-get($mediaSizes, $size)} {
     @content;
-  }
-}
-
-@mixin fadeIn() {
-  animation: fade-in 0.5s ease 0s 1 normal;
-
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-}
-
-@mixin fadeOut() {
-  animation: fade-out 0.5s ease 0s 1 normal;
-
-  @keyframes fade-out {
-    0% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-    }
-  }
-}
-
-@mixin moveY($prevSize, $nextSize) {
-  animation: move-y 0.5s ease 0s 1 normal;
-
-  @keyframes move-y {
-    0% {
-      transform: translateY($prevSize);
-    }
-
-    100% {
-      transform: translateY($nextSize);
-    }
-  }
-}
-
-@mixin moveX($prevSize, $nextSize) {
-  animation: move-x 0.5s ease 0s 1 normal;
-
-  @keyframes move-x {
-    0% {
-      transform: translateX($prevSize);
-    }
-
-    100% {
-      transform: translateX($nextSize);
-    }
   }
 }

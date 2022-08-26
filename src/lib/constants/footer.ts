@@ -17,6 +17,7 @@ export const FooterContents: FooterContent[][] = [
     { value: "資料請求", link: "/" },
     { value: "お問い合わせ", link: "/" },
     { value: "社長ブログ", link: "/" },
+    { value: "", link: "/" },
   ],
   [
     {
