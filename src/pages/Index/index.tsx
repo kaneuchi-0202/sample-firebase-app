@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-location";
 import { Card } from "../../components/Card";
 import { ContactButtons } from "../../components/ContactButtons";
 import styles from "./style.module.scss";
@@ -26,12 +27,20 @@ const Index: React.FC = () => {
         <div className={`${styles.Index__topBlock} ${styles.Index__pc}`}>
           <p className={styles.Index__topBlockCopy}>弊社のメソッド</p>
           <ul className={styles.Index__topBlockMethods}>
-            <li>BtoBマーケティングのメソッド　→</li>
-            <li>営業のメソッド　→</li>
-            <li>新規事業のメソッド　→</li>
+            {[
+              "BtoBマーケティングのメソッド",
+              "営業のメソッド",
+              "新規事業のメソッド",
+            ].map((str, idx) => {
+              return (
+                <li key={idx}>
+                  <Link to={"/service"}>{str}</Link>
+                </li>
+              );
+            })}
           </ul>
           <p className={styles.Index__topBlockMethodsText}>
-            全<span>213</span>件のメソッドを公開中
+            全<span>999</span>件のメソッドを公開中
           </p>
         </div>
       </div>

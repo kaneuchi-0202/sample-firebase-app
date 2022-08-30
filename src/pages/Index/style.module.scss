@@ -103,6 +103,12 @@
         li {
           margin-top: var.$m-24;
           font-weight: var.$font-bold;
+
+          &::after {
+            content: "→";
+            position: relative;
+            right: -16px;
+          }
         }
 
         &Text {
@@ -194,7 +200,7 @@
   }
 
   &__pc {
-    display: contents;
+    display: flex;
 
     @include var.mq(ltm) {
       display: none;
@@ -205,7 +211,7 @@
     display: none;
 
     @include var.mq(ltm) {
-      display: contents;
+      display: flex;
     }
   }
 }

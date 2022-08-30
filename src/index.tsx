@@ -8,6 +8,7 @@ import { ReactLocation, Router, RouterProps } from "@tanstack/react-location";
 
 const Index = () => import("./pages/Index").then((mod) => <mod.default />);
 const Service = () => import("./pages/Service").then((mod) => <mod.default />);
+const Empty = () => import("./pages/Empty").then((mod) => <mod.default />);
 
 const location = new ReactLocation();
 
@@ -23,6 +24,10 @@ const Root: React.FC = () => {
         {
           path: "/service",
           element: () => Service(),
+        },
+        {
+          path: "*",
+          element: () => Empty(),
         },
       ],
     },
