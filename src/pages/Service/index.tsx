@@ -10,9 +10,9 @@ const Service: React.FC = () => {
         <div className={styles.Service__service}>
           <div className={styles.Service__serviceTitle}>サービス</div>
           <div className={styles.Service__serviceText}>
-            独自に開発した100以上のメソッドを用いて、
+            独自に構築したHP作成用テンプレートを使用して、
             <br />
-            高い品質のコンサルティングサービスを確立されたプロセスで提供します。
+            高品質、高可用性のWebページを構築して提供します。
           </div>
           <ContactButtons />
         </div>
@@ -21,18 +21,20 @@ const Service: React.FC = () => {
         <div className={styles.Service__content}>
           <Card className={styles.Service__contentCard} link="/service">
             <>
-              <span>BtoBマーケティング支援</span>
+              <span>ホームページ作成</span>
               <p>
-                BtoBマーケティングのあらゆる悩みを解決します。企業のマーケティング活動を抜本的に見直し、マーケティング戦略の立案から施策の実行、PDCAまでサポートします。
+                サーバ、ドメインの準備不要でサイト作成可能です。
+                <br />
+                1ページ～複数ページまで見積もりますので、お気軽にお問い合わせください。
               </p>
               <p className={styles.Service__contentCardLink}>詳しく見る　→</p>
             </>
           </Card>
           <Card className={styles.Service__contentCard} link="/service">
             <>
-              <span>営業支援</span>
+              <span>プログラムアドバイス</span>
               <p>
-                営業成果を最大化するための仕組みづくりを支援します。お客様に最適な「営業の型」を見出し、属人的な営業活動から脱却します。
+                Java、Javascript等のコーディングアドバイスを行います。エラー解決、課題解消をお手伝いいたします。
               </p>
               <p className={styles.Service__contentCardLink}>詳しく見る　→</p>
             </>
@@ -44,11 +46,12 @@ const Service: React.FC = () => {
           <div className={styles.Service__contactBlock}>
             <span>資料請求</span>
             <p>
-              サービス資料をダウンロードいただけます。BtoBマーケティング支援や営業支援のサービスをご検討の方はぜひご一読ください。
+              こちらサンプルであるため資料等用意しておりませんが、以下リンクのLancersよりお気軽にお問い合わせください。
             </p>
             <Button
               value="資料請求する"
-              link="/"
+              link="https://www.lancers.jp/profile/kaneuchi_0202"
+              pageTransition={true}
               theme="primary"
               size="large"
               className={styles.Service__contactBlockButton}
@@ -57,11 +60,13 @@ const Service: React.FC = () => {
           <div className={styles.Service__contactBlock}>
             <span>お問い合わせ</span>
             <p>
-              お客様のBtoBマーケティングや営業活動における課題解決をサポートします。お気軽にご相談ください。
+              少しでも気になることがあれば、まずはお問い合わせください。
+              内容に応じて見積もりやその他対応をさせていただきます。
             </p>
             <Button
               value="お問い合わせする"
-              link="/"
+              link="https://www.lancers.jp/profile/kaneuchi_0202"
+              pageTransition={true}
               theme="primary"
               size="large"
               className={styles.Service__contactBlockButton}

@@ -25,6 +25,14 @@
   &__title {
     font-size: var.$xxxxLarge;
     font-weight: var.$font-bold;
+    display: flex;
+    align-items: center;
+  }
+
+  &__subTitle {
+    font-size: var.$large;
+    font-weight: var.$font-bold;
+    margin-left: 16px;
   }
 
   &__links {
@@ -60,6 +68,22 @@
 
     &:hover::after {
       width: 100%;
+    }
+  }
+
+  &__pc {
+    display: flex;
+
+    @include var.mq(ltm) {
+      display: none;
+    }
+  }
+
+  &__sp {
+    display: none;
+
+    @include var.mq(ltm) {
+      display: flex;
     }
   }
 }

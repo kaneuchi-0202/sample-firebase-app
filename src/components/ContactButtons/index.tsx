@@ -15,8 +15,18 @@ export const ContactButtons: React.FC<Props> = ({ className }) => {
           : styles.ContactButtons
       }
     >
-      <Button value="資料請求する" link="/" theme="primary" />
-      <Button value="お問い合わせする" link="/" theme="white" />
+      <Button
+        value="資料請求する"
+        link="https://www.lancers.jp/profile/kaneuchi_0202"
+        pageTransition={true}
+        theme="primary"
+      />
+      <Button
+        value="お問い合わせする"
+        link="https://www.lancers.jp/profile/kaneuchi_0202"
+        pageTransition={true}
+        theme="white"
+      />
     </div>
   );
 };

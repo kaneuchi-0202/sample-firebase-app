@@ -11,26 +11,26 @@ const Index: React.FC = () => {
           <p className={styles.Index__topBlockCopy}>
             THE
             <br />
-            METHOD
+            SAMPLE
             <br />
             COMPANY
           </p>
           <p className={styles.Index__topBlockText}>
-            成果が実証されているメソッドで
+            目に留まるホームページを
             <span className={styles.Index__sp}>
               <br />
             </span>
-            コンサルティングします
+            作成します
           </p>
           <ContactButtons className={styles.Index__topBlockButtons} />
         </div>
         <div className={`${styles.Index__topBlock} ${styles.Index__pc}`}>
-          <p className={styles.Index__topBlockCopy}>弊社のメソッド</p>
+          <p className={styles.Index__topBlockCopy}>HPの特徴</p>
           <ul className={styles.Index__topBlockMethods}>
             {[
-              "BtoBマーケティングのメソッド",
-              "営業のメソッド",
-              "新規事業のメソッド",
+              "わかりやすいサイト設計",
+              "統一されたデザイン",
+              "SPAによる軽快な動作",
             ].map((str, idx) => {
               return (
                 <li key={idx}>
@@ -56,18 +56,20 @@ const Index: React.FC = () => {
         <div className={styles.Index__content}>
           <Card className={styles.Index__contentCard} link="/service">
             <>
-              <span>BtoBマーケティング支援</span>
+              <span>ホームページ作成</span>
               <p>
-                BtoBマーケティングのあらゆる悩みを解決します。企業のマーケティング活動を抜本的に見直し、マーケティング戦略の立案から施策の実行、PDCAまでサポートします。
+                サーバ、ドメインの準備不要でサイト作成可能です。
+                <br />
+                1ページ～複数ページまで見積もりますので、お気軽にお問い合わせください。
               </p>
               <p className={styles.Index__contentCardLink}>詳しく見る　→</p>
             </>
           </Card>
           <Card className={styles.Index__contentCard} link="/service">
             <>
-              <span>営業支援</span>
+              <span>プログラムアドバイス</span>
               <p>
-                営業成果を最大化するための仕組みづくりを支援します。お客様に最適な「営業の型」を見出し、属人的な営業活動から脱却します。
+                Java、Javascript等のコーディングアドバイスを行います。エラー解決、課題解消をお手伝いいたします。
               </p>
               <p className={styles.Index__contentCardLink}>詳しく見る　→</p>
             </>
@@ -78,16 +80,16 @@ const Index: React.FC = () => {
         <div className={styles.Index__titleAndText}>
           <h2>特徴</h2>
           <p>
-            成果が実証されたメソッドによる確実性の高いコンサルティングが最大の特長です。
+            デザインを統一しSPAで作成することで、訪問者にストレスを与えないサイト作成が最大の特徴です。
             <br />
-            提案した施策を速やかに実行できる体制を用意しています。
+            情報を適切に整理することで修正時の手間も簡略化しています。
           </p>
         </div>
         <div className={styles.Index__features}>
           {[
-            "150件以上のメソッドで<br />ビジネス課題を解決",
-            "幅広い業界での<br />100社以上の成功事例",
-            "経験豊富なコンサル<br />タントが徹底サポート",
+            "訪問者が迷うことのない<br />サイト設計",
+            "統一されたデザインで<br />シンプルに見やすく",
+            "ページ遷移を行わず<br />訪問者の滞在確立をUP",
           ].map((value, idx) => {
             return (
               <div key={idx} className={styles.Index__featuresWrapper}>

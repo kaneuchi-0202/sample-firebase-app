@@ -7,6 +7,7 @@ type Props = {
   size?: "normal" | "large";
   value: string;
   link: string;
+  pageTransition?: boolean;
   className?: string;
 };
 
@@ -15,6 +16,7 @@ export const Button: React.FC<Props> = ({
   size = "normal",
   value,
   link,
+  pageTransition = false,
   className,
 }) => {
   return (
@@ -23,7 +25,13 @@ export const Button: React.FC<Props> = ({
       data-theme={theme}
       data-size={size}
     >
-      <Link to={link}>{value}　→</Link>
+      {pageTransition ? (
+        <a href={link} target="_blank" rel="noreferrer">
+          {value}　→
+        </a>
+      ) : (
+        <Link to={link}>{value}　→</Link>
+      )}
     </div>
   );
 };

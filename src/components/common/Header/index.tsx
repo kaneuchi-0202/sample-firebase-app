@@ -9,7 +9,15 @@ export const Header: React.FC = () => {
   return (
     <header className={styles.Header}>
       <div className={styles.Header__headerWrapper}>
-        <div className={styles.Header__title}>Sample</div>
+        <Link className={styles.Header__title}>
+          Sample
+          <span className={`${styles.Header__subTitle} ${styles.Header__pc}`}>
+            (こちらはサンプルサイトです)
+          </span>
+          <span className={`${styles.Header__subTitle} ${styles.Header__sp}`}>
+            (サンプルサイトです)
+          </span>
+        </Link>
         <div className={styles.Header__links}>
           {Categories.map((category, idx) => {
             return (
