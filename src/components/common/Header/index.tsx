@@ -2,8 +2,14 @@ import { Link, useLocation } from "@tanstack/react-location";
 import React from "react";
 import styles from "./style.module.scss";
 import { Categories } from "../../../lib/constants/categories";
+import { SideMenuButton } from "../../SideMenu";
 
-export const Header: React.FC = () => {
+type Props = {
+  show: boolean;
+  onClickHamburger: () => void;
+};
+
+export const Header: React.FC<Props> = ({ show, onClickHamburger }) => {
   const { current } = useLocation();
 
   return (
@@ -32,6 +38,7 @@ export const Header: React.FC = () => {
             );
           })}
         </div>
+        <SideMenuButton show={show} onClickHamburger={onClickHamburger} />
       </div>
     </header>
   );
