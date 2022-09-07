@@ -1,6 +1,12 @@
 @use "../../styles/variables.scss" as var;
 
 .SideMenuButton {
+  display: none;
+
+  @include var.mq(ltm) {
+    display: block;
+  }
+
   input[type="checkbox"] {
     display: none;
 

@@ -16,11 +16,7 @@ const Index: React.FC = () => {
             COMPANY
           </p>
           <p className={styles.Index__topBlockText}>
-            目に留まるホームページを
-            <span className={styles.Index__sp}>
-              <br />
-            </span>
-            作成します
+            目に留まるホームページを作成します
           </p>
           <ContactButtons className={styles.Index__topBlockButtons} />
         </div>
@@ -48,9 +44,9 @@ const Index: React.FC = () => {
         <div className={styles.Index__titleAndText}>
           <h2>サービス</h2>
           <p>
-            数多くの実践事例からベストプラクティスを導き、独自のメソッドとして開発しています。
+            独自に構築したHP作成用テンプレートを使用して、
             <br />
-            メソッドにもとづいたコンサルティングによって、お客様のビジネス課題を最短距離で解決します。
+            高品質、高可用性のWebページを構築して提供します。
           </p>
         </div>
         <div className={styles.Index__content}>

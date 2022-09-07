@@ -10,6 +10,10 @@
   background-color: var.$primary-bg;
   color: var.$white;
 
+  @include var.mq(ltm) {
+    padding: 64px 16px;
+  }
+
   h2 {
     font-size: var.$xxxxLarge;
     font-weight: var.$font-bold;
@@ -17,6 +21,7 @@
 
   p {
     font-size: var.$xLarge;
+    text-align: left;
   }
 
   ul {
@@ -26,5 +31,9 @@
   li {
     font-size: var.$xLarge;
     color: var.$white;
+  }
+
+  a {
+    text-decoration: underline;
   }
 }
