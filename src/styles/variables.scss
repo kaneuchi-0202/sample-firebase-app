@@ -1,0 +1,70 @@
+@use "sass:color";
+
+$z-normal: 1;
+$z-header: 10;
+$z-modal: 20;
+$z-sideMenuBg: 24;
+$z-sideMenu: 25;
+$z-alert: 30;
+
+$primary: #225827;
+$primary-bg: #2a6830;
+$secondary: #986;
+$tertiary: #608494;
+$gray: #7d8679;
+$gray-100: color.adjust($gray, $lightness: 40%);
+$black: #4b5049;
+$white: #fff;
+$white-gray: #f9f9f9;
+$success: #507d4f;
+$error: #b14c4c;
+$warning: #b2904d;
+
+$font: futura-pt, arial, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Sans JP", "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans", sans-serif;
+
+$xSmall: 1rem;
+$small: 1.2rem;
+$medium: 1.4rem;
+$large: 1.6rem;
+$xLarge: 1.8rem;
+$xxLarge: 2rem;
+$xxxLarge: 2.2rem;
+$xxxxLarge: 3.6rem;
+$copy: 7rem;
+$copy-sp: 5.5rem;
+
+$font-normal: 400;
+$font-bold: 700;
+
+// margin
+$m-4: 4px;
+$m-8: 8px;
+$m-16: 16px;
+$m-24: 24px;
+$m-32: 32px;
+$m-40: 40px;
+$m-48: 48px;
+$m-56: 56px;
+$m-64: 64px;
+$m-80: 80px;
+$m-128: 128px;
+$m-256: 256px;
+
+// breakpoint
+$bp-small: 528px;
+$bp-medium: 768px;
+
+$mediaSizes: (
+  // 768px-∞ GreaterThanMedium
+  "gtm": "screen and (min-width: #{$bp-medium})",
+  // ∞-768px LessThanMedium
+  "ltm": "screen and (max-width: #{$bp-medium})"
+);
+
+@mixin mq($size) {
+  @media #{map-get($mediaSizes, $size)} {
+    @content;
+  }
+}

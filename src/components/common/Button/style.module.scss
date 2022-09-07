@@ -1,0 +1,56 @@
+@use "../../../styles/variables.scss" as var;
+
+.Button {
+  font-family: var.$font;
+  font-size: var.$large;
+  font-weight: var.$font-bold;
+  border-radius: 5px;
+
+  &[data-theme="primary"] {
+    border: 1px solid var.$white;
+    background-color: var.$primary-bg;
+    color: var.$white;
+
+    &:hover {
+      animation: primaryHoverAnimation 0.2s ease 0s forwards 1 normal;
+    }
+
+    @keyframes primaryHoverAnimation {
+      to {
+        border: 1px solid var.$primary;
+        background-color: var.$white;
+        color: var.$primary;
+      }
+    }
+  }
+
+  &[data-theme="white"] {
+    border: 1px solid var.$primary;
+    background-color: var.$white;
+    color: var.$primary;
+
+    &:hover {
+      animation: whiteHoverAnimation 0.2s ease 0s forwards 1 normal;
+    }
+
+    @keyframes whiteHoverAnimation {
+      to {
+        border: 1px solid var.$white;
+        background-color: var.$primary-bg;
+        color: var.$white;
+      }
+    }
+  }
+
+  &[data-size="normal"] {
+    width: 220px;
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  &[data-size="large"] {
+    width: 100%;
+    text-align: left;
+    padding: 24px;
+  }
+}

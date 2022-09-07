@@ -1,0 +1,217 @@
+@use "../../styles/variables.scss" as var;
+
+.Index {
+  font-family: var.$font;
+
+  &__section {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var.$primary;
+
+    &:nth-child(odd) {
+      background-color: var.$white-gray;
+      color: var.$primary;
+    }
+
+    @include var.mq(ltm) {
+      padding: 64px 32px;
+    }
+  }
+
+  &__titleAndText {
+    h2 {
+      font-size: var.$xxxxLarge;
+      font-weight: var.$font-bold;
+
+      @include var.mq(ltm) {
+        font-size: var.$xxxLarge;
+      }
+    }
+
+    p {
+      margin-top: var.$m-16;
+      font-size: var.$large;
+
+      @include var.mq(ltm) {
+        text-align: left;
+        font-size: var.$medium;
+      }
+    }
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+
+    @include var.mq(ltm) {
+      display: block;
+    }
+
+    &Block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 128px 0;
+      color: var.$primary;
+      background-color: var.$white-gray;
+
+      @include var.mq(ltm) {
+        padding: 80px 64px;
+      }
+
+      &:nth-child(even) {
+        background-color: var.$primary;
+        color: var.$white;
+      }
+
+      &Copy {
+        text-align: left;
+        font-size: var.$copy;
+
+        @include var.mq(ltm) {
+          text-align: center;
+          font-size: var.$copy-sp;
+        }
+      }
+
+      &Text {
+        text-align: left;
+        font-size: var.$large;
+
+        @include var.mq(ltm) {
+          text-align: center;
+        }
+      }
+
+      &Buttons {
+        margin-top: var.$m-48;
+
+        @include var.mq(ltm) {
+          margin-top: var.$m-32;
+        }
+      }
+
+      &Methods {
+        font-size: var.$xLarge;
+        text-align: left;
+        list-style: disc;
+
+        li {
+          margin-top: var.$m-24;
+          font-weight: var.$font-bold;
+
+          &::after {
+            content: "→";
+            position: relative;
+            right: -16px;
+          }
+        }
+
+        &Text {
+          margin-top: var.$m-48;
+          font-size: var.$xxLarge;
+
+          span {
+            font-size: var.$copy-sp;
+            margin: 0 var.$m-8;
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin: var.$m-48 var.$m-48 0;
+    display: flex;
+    max-width: 1200px;
+    gap: 40px;
+
+    @include var.mq(ltm) {
+      margin: var.$m-48 0 0;
+      flex-direction: column;
+    }
+
+    &Card {
+      text-align: left;
+
+      span {
+        font-size: var.$xxxLarge;
+        font-weight: var.$font-bold;
+      }
+
+      p {
+        margin-top: var.$m-16;
+        font-size: var.$large;
+      }
+
+      &Link {
+        text-align: right;
+        font-weight: var.$font-bold;
+      }
+    }
+  }
+
+  &__features {
+    margin-top: var.$m-48;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    font-weight: var.$font-bold;
+
+    @include var.mq(ltm) {
+      margin-top: var.$m-32;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+    }
+
+    &Number {
+      width: 100px;
+      height: 100px;
+      border: 1px solid var.$primary;
+      border-radius: 50px;
+      text-align: center;
+      line-height: 100px;
+      font-size: var.$xxxLarge;
+    }
+
+    &Wrapper {
+      width: 200px;
+      font-weight: var.$font-bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p {
+      margin-top: var.$m-48;
+      font-weight: var.$font-bold;
+      font-size: var.$xLarge;
+
+      @include var.mq(ltm) {
+        margin-top: var.$m-24;
+      }
+    }
+  }
+
+  &__pc {
+    display: flex;
+
+    @include var.mq(ltm) {
+      display: none;
+    }
+  }
+
+  &__sp {
+    display: none;
+
+    @include var.mq(ltm) {
+      display: flex;
+    }
+  }
+}

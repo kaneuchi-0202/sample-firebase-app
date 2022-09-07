@@ -1,0 +1,118 @@
+@use "../../styles/variables.scss" as var;
+
+.Service {
+  font-family: var.$font;
+
+  &__section {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var.$primary;
+
+    @include var.mq(ltm) {
+      padding: 64px 16px;
+    }
+
+    &:nth-child(odd) {
+      background-color: var.$primary-bg;
+      color: var.$white;
+    }
+  }
+
+  &__service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+
+    &Title {
+      font-size: var.$xxxxLarge;
+      font-weight: var.$font-bold;
+    }
+
+    &Text {
+      font-size: var.$large;
+    }
+  }
+
+  &__content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 var.$m-48;
+    gap: 40px;
+
+    @include var.mq(ltm) {
+      margin: 0;
+      flex-direction: column;
+    }
+
+    &Card {
+      text-align: left;
+
+      span {
+        font-size: var.$xxxLarge;
+        font-weight: var.$font-bold;
+      }
+
+      p {
+        margin-top: var.$m-16;
+        font-size: var.$large;
+      }
+
+      &Link {
+        text-align: right;
+        font-weight: var.$font-bold;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    max-width: 1200px;
+
+    @include var.mq(ltm) {
+      margin: 0;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &Block {
+      width: 50%;
+      padding: 0 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      @include var.mq(ltm) {
+        width: 100%;
+        padding: 0 0 32px;
+      }
+
+      span {
+        font-size: var.$xxxLarge;
+        font-weight: var.$font-bold;
+      }
+
+      p {
+        margin-top: var.$m-16;
+        font-size: var.$large;
+        text-align: left;
+      }
+
+      &Button {
+        margin-top: var.$m-40;
+      }
+
+      &:nth-child(odd) {
+        border-right: 1px solid var.$white;
+
+        @include var.mq(ltm) {
+          border-bottom: 1px solid var.$white;
+          border-right: none;
+        }
+      }
+    }
+  }
+}
